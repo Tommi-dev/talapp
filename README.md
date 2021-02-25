@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Tiimin arviointilomake
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Harjoitustyön tarkoituksena on luoda prototyyppisovellus alla olevien vaatimusten mukaisesti.
 
-In the project directory, you can run:
+### Sovelluksen kuvaus
 
-### `npm start`
+Sovellus on suunnattu henkilöille, jotka työskentelevät vaihtelevien projektien parissa. Sovelluksen avulla käyttäjä voi arvioida tiiminsä usealla eri parametrilla ja tutkia tämän tiedon avulla tiiminsä tehokkuutta. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Käyttäjätarinat
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Tiimin jäsenenä haluaisin arvioida tiimin motivaatiota, sillä haluaisin tutkia jälkikäteen tämän vaikutusta projektityöhön.
+  
+2. Tiimin jäsenenä haluaisin arvioida tiimini henkilökemioita, sillä haluaisin tutkia jälkikäteen tämän vaikutusta projektityöhön.
+  
+3.	Tiimin jäsenenä haluaisin arvioida tiimin tehokkuutta tehtävissään, sillä haluaisin tutkia jälkikäteen tämän vaikutusta projektityöhön.
+  
+4. Tiimin jäsenenä haluaisin arvioida tiimin täsmällisyyttä, sillä haluaisin tutkia jälkikäteen tämän vaikutusta projektityöhön.
+  
+5. Tiimin jäsenenä haluaisin tietää tiimin koon, sillä haluaisin tutkia jälkikäteen tämän vaikutusta muihin annettuihin parametreihin.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Käyttötapaus 1: Kyselylomakkeen täyttäminen
+  
+Kuvaus: Käyttäjä haluaa vastata kysymyksiin mahdollisimman nopeasti ja vaivattomasti.
+  
+Esiehdot: Selain on ladannut ja piirtänyt kyselylomakkeen käyttäjän laitteelle
+  
+Tapahtuman kuvaus:
+  1. Käyttäjä näkee kysymykset selkeästi eroteltuna.
+  2. Käyttäjä pystyy vastaamaan kysymyksiin mahdollisimman helposti ja nopeasti.
+  3. Käyttäjä saa virheilmoituksen, jos kysymyksiin ei ole annettu vastausta.
+  4. Käyttäjä näkee selkeästi virheilmoituksen.
+  5. Käyttäjä löytää lähetysnapin helposti.
+  
+### Käyttötapaus 2: Kyselyvastausten visualisointi
+  
+Kuvaus: Käyttäjä haluaa nähdä kyselyvastausten tulokset visuaalisesti esitettynä.
+  
+Esiehdot: Kyselylomakkeen lähetysnappia on painettu.
+  
+Tapahtuman kuvaus:
+  1. Käyttäjä näkee keskeiset tulokset selkeästi ensinäkemällä.
+  2. Käyttäjän tulokset on esitetty numeerisesti, kaavioiden ja kuvien avulla.
+  3. Käyttäjä voi tutkia historiallista dataa.
+  4. Käyttäjä voi laitteesta riippumatta ihailla tuloksiaan selkeästi.
