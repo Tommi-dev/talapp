@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { render } from '@testing-library/react'
 import Result from '../components/result/Result'
 
-test('renders title', () => {
+test('renders the title of the Result component', () => {
 
   const component = render(
     <Result />
