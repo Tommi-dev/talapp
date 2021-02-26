@@ -3,12 +3,15 @@ import React from 'react'
 const Slider = (props) => {
   return (
     <section className='slider-container' >
-      <label className='slider-container-title' > <p> {props.title} </p> </label>
+      <label htmlFor={props.group} className='slider-container-title' > <p> {props.title} </p> </label>
 
       <input
         type='range'
         min={props.minValue}
         max={props.maxValue}
+        id={props.group}
+        value={props.changeableValue}
+        onChange={({target}) => props.setValueToBeChanged(target.value)}
       />
 
       <div className='slider-subcontainer' >
