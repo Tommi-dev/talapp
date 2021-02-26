@@ -2,6 +2,7 @@ import React from 'react'
 import Radiobutton from './Radiobutton'
 import Slider from './Slider'
 import Textfield from './Textfield'
+import Button from '../Button'
 
 const Form = () => {
   return (
@@ -42,6 +43,8 @@ const Form = () => {
         title='Kuinka monesta työntekijästä tiimisi koostuu?'
         group='size'
       />
+
+      <Button title='Lähetä' type='submit' />
 
     </form>
   )
