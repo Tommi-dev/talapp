@@ -3,6 +3,7 @@ import Radiobutton from './Radiobutton'
 import Slider from './Slider'
 import Textfield from './Textfield'
 import Button from '../Button'
+import Notification from './Notification'
 
 const Form = () => {
   const [motivation, setMotivation] = useState(null)
@@ -70,6 +71,8 @@ const Form = () => {
         errorMessage={errorMessage}
         setErrorMessage={setErrorMessage}
       />
+
+      <Notification message={errorMessage.textfield} />
 
       <Button title='Lähetä' type='submit' />
 
