@@ -1,6 +1,7 @@
 import React from 'react'
 import Radiobutton from './Radiobutton'
 import Slider from './Slider'
+import Textfield from './Textfield'
 
 const Form = () => {
   return (
@@ -32,17 +33,15 @@ const Form = () => {
         title='Kuinka usein tiimisi pitää kiinni sovituista aikatauluista?'
         minValue='0'
         maxValue='100'
-        group='performance'
+        group='punctuality'
         minDescription='Ei koskaan'
         maxDescription='Aina'
       />
 
-      <section className='textfield-container' >
-        <label className='textfield-container-title' > <p> Kuinka monesta työntekijästä tiimisi koostuu? </p> </label>
-        <input 
-          type='text'
-        />
-      </section>
+      <Textfield 
+        title='Kuinka monesta työntekijästä tiimisi koostuu?'
+        group='size'
+      />
 
     </form>
   )
