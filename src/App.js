@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import teamService from './services/teams'
+import Form from './components/form/Form'
+import Result from './components/result/Result'
 
 const App = () => {
   const [teams, setTeams] = useState([])
+  const [formVisible, setFormVisible] = useState(true)
 
   useEffect(() => {
     teamService.getAll().then(data =>
@@ -13,10 +16,22 @@ const App = () => {
 
   console.log('teams length: ', teams.length)
   console.log('teams: ', teams)
-  
+
+  if(formVisible) {
+    return(
+      <div>
+        <Form 
+          teams={teams}
+          setTeams={setTeams}
+          setFormVisible={setFormVisible}
+        />
+      </div>
+    )
+  }
+
   return (
-    <div className="App">
-      Hello world!
+    <div>
+      <Result />
     </div>
   )
 }
