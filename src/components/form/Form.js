@@ -37,6 +37,13 @@ const Form = () => {
         maxDescription='Aina'
       />
 
+      <section className='textfield-container' >
+        <label className='textfield-container-title' > <p> Kuinka monesta työntekijästä tiimisi koostuu? </p> </label>
+        <input 
+          type='text'
+        />
+      </section>
+
     </form>
   )
 }
