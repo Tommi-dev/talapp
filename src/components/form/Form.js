@@ -10,12 +10,17 @@ const Form = () => {
   const [performance, setPerformance] = useState(0)
   const [punctuality, setPunctuality] = useState(0)
   const [size, setSize] = useState('')
+  const [errorMessage, setErrorMessage] = useState({
+    textfield: '',
+    radiobutton: ''
+  })
 
   console.log('motivation value: ', motivation)
   console.log('chemistry value: ', chemistry)
   console.log('performance value: ', performance)
   console.log('punctuality value: ', punctuality)
   console.log('size value: ', size)
+  console.log('Error message: ', errorMessage)
 
   return (
     <form className='form-container' >
@@ -60,7 +65,10 @@ const Form = () => {
       <Textfield 
         title='Kuinka monesta työntekijästä tiimisi koostuu?'
         group='size'
+        changeableValue={size}
         setValueToBeChanged={setSize}
+        errorMessage={errorMessage}
+        setErrorMessage={setErrorMessage}
       />
 
       <Button title='Lähetä' type='submit' />
