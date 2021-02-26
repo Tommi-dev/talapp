@@ -1,127 +1,22 @@
 import React from 'react'
+import Radiobutton from './Radiobutton'
 
 const Form = () => {
-  return(
+  return (
     <form className='form-container' >
       <h1>Kyselylomake</h1>
 
-      <section className='radiobutton-container' >
-        <label className='radiobutton-container-title' > <p>Kuinka motivoitunut tiimisi on?</p> </label>
+      <Radiobutton
+        title='Kuinka motivoitunut tiimisi on?'
+        group='motivation'
+        buttons={['Ei lainkaan motivoitunut', 'Ei kovin motivoitunut', 'Melko motivoitunut', 'Varsin motivoitunut', 'Erittäin motivoitunut']}
+      />
 
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='motivation'
-            />
-            <span className='check' ></span>
-            Ei lainkaan motivoitunut
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='motivation'
-            />
-            <span className='check' ></span>
-            Ei kovin motivoitunut
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='motivation'
-            />
-            <span className='check' ></span>
-            Melko motivoitunut
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='motivation'
-            />
-            <span className='check' ></span>
-            Varsin motivoitunut
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='motivation'
-            />
-            <span className='check' ></span>
-            Erittäin motivoitunut
-          </label>
-        </div>
-      </section>
-
-      <section className='radiobutton-container' >
-        <label className='radiobutton-container-title' > <p>Kuinka hyvin henkilökemiat kohtaavat tiimissäsi?</p> </label>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='chemistry'
-            />
-            <span className='check' ></span>
-            Ei lainkaan
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='chemistry'
-            />
-            <span className='check' ></span>
-            Ei kovin hyvin
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='chemistry'
-            />
-            <span className='check' ></span>
-            Melko hyvin
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='chemistry'
-            />
-            <span className='check' ></span>
-            Varsin hyvin
-          </label>
-        </div>
-
-        <div className='radiobutton-subcontainer' >
-          <label className='radiobutton-subcontainer-container' >
-            <input 
-              type='radio'
-              name='chemistry'
-            />
-            <span className='check' ></span>
-            Erittäin hyvin
-          </label>
-        </div>
-      </section>
+      <Radiobutton
+        title='Kuinka hyvin henkilökemiat kohtaavat tiimissäsi?'
+        group='chemistry'
+        buttons={['Ei lainkaan', 'Ei kovin hyvin', 'Melko hyvin', 'Varsin hyvin', 'Erittäin hyvin']}
+      />
 
     </form>
   )
