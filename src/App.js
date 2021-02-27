@@ -10,17 +10,17 @@ const App = () => {
 
   useEffect(() => {
     teamService.getAll().then(data =>
-      setTeams(data)  
+      setTeams(data)
     )
   }, [])
 
   console.log('teams length: ', teams.length)
   console.log('teams: ', teams)
 
-  if(formVisible) {
-    return(
+  if (formVisible) {
+    return (
       <div>
-        <Form 
+        <Form
           teams={teams}
           setTeams={setTeams}
           setFormVisible={setFormVisible}
@@ -31,7 +31,10 @@ const App = () => {
 
   return (
     <div>
-      <Result />
+      <Result
+        teams={teams}
+        setFormVisible={setFormVisible}
+      />
     </div>
   )
 }

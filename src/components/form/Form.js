@@ -33,7 +33,6 @@ const Form = (props) => {
       }
 
       const newObject = {
-        ...props.teams,
         motivation: parseInt(motivation / 4 * 100),
         chemistry: parseInt(chemistry / 4 * 100),
         performance: parseInt(performance),
@@ -50,6 +49,8 @@ const Form = (props) => {
       setPerformance(0)
       setPunctuality(0)
       setSize('')
+
+      props.setFormVisible(false)
 
     } catch(exception) {
       console.log(exception.name + ' : ' + exception.message)
