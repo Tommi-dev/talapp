@@ -14,30 +14,50 @@ const Form = (props) => {
   const [size, setSize] = useState('')
   const [errorMessage, setErrorMessage] = useState({
     textfield: '',
-    radiobutton: ''
+    submit: ''
   })
 
   const submitForm = async (event) => {
     event.preventDefault()
 
-    const newObject = {
-      ...props.teams,
-      motivation: parseInt(motivation / 4 * 100),
-      chemistry: parseInt(chemistry / 4 * 100),
-      performance: parseInt(performance),
-      punctuality: parseInt(punctuality),
-      size: parseInt(size),
-      date: new Date()
-    }
+    try {
+      
+      if (motivation === null) {
+        throw new Error('Motivaatiokysymykseen ei ole vastattu')
+      }
+      if (chemistry === null) {
+        throw new Error('Et ole arvioinut tiimisi henkilökemioita')
+      } 
+      if (size === '') {
+        throw new Error('Tiimin kokoa ei ole annettu')
+      }
 
-    const returnedData = teamService.create(newObject)
-    props.setTeams(props.teams.concat(returnedData))
-    
-    setMotivation(null)
-    setChemistry(null)
-    setPerformance(0)
-    setPunctuality(0)
-    setSize('')
+      const newObject = {
+        ...props.teams,
+        motivation: parseInt(motivation / 4 * 100),
+        chemistry: parseInt(chemistry / 4 * 100),
+        performance: parseInt(performance),
+        punctuality: parseInt(punctuality),
+        size: parseInt(size),
+        date: new Date()
+      }
+  
+      const returnedData = teamService.create(newObject)
+      props.setTeams(props.teams.concat(returnedData))
+      
+      setMotivation(null)
+      setChemistry(null)
+      setPerformance(0)
+      setPunctuality(0)
+      setSize('')
+
+    } catch(exception) {
+      console.log(exception.name + ' : ' + exception.message)
+      setErrorMessage({...errorMessage, submit: exception.message})
+      setTimeout(() => {
+        setErrorMessage({...errorMessage, submit: ''})
+      }, 3000)
+    }
 
   }
 
@@ -98,6 +118,7 @@ const Form = (props) => {
       />
 
       <Notification message={errorMessage.textfield} />
+      <Notification message={errorMessage.submit} />
 
       <Button title='Lähetä' type='submit' />
 
