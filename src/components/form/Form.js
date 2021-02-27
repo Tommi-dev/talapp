@@ -4,8 +4,9 @@ import Slider from './Slider'
 import Textfield from './Textfield'
 import Button from '../Button'
 import Notification from './Notification'
+import teamService from '../../services/teams'
 
-const Form = () => {
+const Form = (props) => {
   const [motivation, setMotivation] = useState(null)
   const [chemistry, setChemistry] = useState(null)
   const [performance, setPerformance] = useState(0)
@@ -16,6 +17,30 @@ const Form = () => {
     radiobutton: ''
   })
 
+  const submitForm = async (event) => {
+    event.preventDefault()
+
+    const newObject = {
+      ...props.teams,
+      motivation: parseInt(motivation / 4 * 100),
+      chemistry: parseInt(chemistry / 4 * 100),
+      performance: parseInt(performance),
+      punctuality: parseInt(punctuality),
+      size: parseInt(size),
+      date: new Date()
+    }
+
+    const returnedData = teamService.create(newObject)
+    props.setTeams(props.teams.concat(returnedData))
+    
+    setMotivation(null)
+    setChemistry(null)
+    setPerformance(0)
+    setPunctuality(0)
+    setSize('')
+
+  }
+
   console.log('motivation value: ', motivation)
   console.log('chemistry value: ', chemistry)
   console.log('performance value: ', performance)
@@ -24,7 +49,7 @@ const Form = () => {
   console.log('Error message: ', errorMessage)
 
   return (
-    <form className='form-container' >
+    <form className='form-container' onSubmit={submitForm} >
       <h1>Kyselylomake</h1>
 
       <Radiobutton
