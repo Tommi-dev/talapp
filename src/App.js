@@ -19,23 +19,19 @@ const App = () => {
 
   if (formVisible) {
     return (
-      <div>
         <Form
           teams={teams}
           setTeams={setTeams}
           setFormVisible={setFormVisible}
         />
-      </div>
     )
   }
 
   return (
-    <div>
       <Result
         teams={teams}
         setFormVisible={setFormVisible}
       />
-    </div>
   )
 }
 

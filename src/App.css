@@ -1,0 +1,248 @@
+/*=============================*/
+/* FONTS */
+/*=============================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+/*=============================*/
+/* Button.js */
+/*=============================*/
+.button-container{
+  text-align: center;
+  margin-top: 100px;
+}
+
+.button-container button{
+  background-color: #8c00ff;
+  border: 2px solid #8c00ff;
+  border-radius: 10px;
+  color: white;
+  padding: 8px;
+  width: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;  
+}
+
+.button-container button:hover{
+  background-color: #8c00ffbd;
+}
+
+
+/*=============================*/
+/* Form.js */
+/*=============================*/
+.form-container{
+  display: block;
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  min-width: 280px;
+  max-width: 80%;
+}
+
+.form-container h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 35px;
+
+  margin: auto;
+  color: white;
+  max-width: 450px;
+  padding: 30px;
+  background-color: #8c00ff;
+}
+
+
+/*=============================*/
+/* Radiobutton.js */
+/*=============================*/
+.radiobutton-container{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.radiobutton-container-title{
+  margin-bottom: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.radiobutton-subcontainer{
+
+  max-width: 500px;
+  margin: auto;
+}
+
+.radiobutton-subcontainer-container{
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 24px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+.radiobutton-subcontainer-container input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radiobutton-subcontainer-container .check{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 5%;
+  border-radius: 50%;
+  border: 2px solid #8c00ff;
+  background-color:rgb(255, 255, 255);
+}
+
+.radiobutton-subcontainer-container:hover input ~ .check{
+  background-color: #8c00ff86;
+}
+
+.radiobutton-subcontainer-container input:checked ~ .check{
+  background-color: #8c00ff;
+}
+
+
+/*=============================*/
+/* Slider.js */
+/*=============================*/
+.slider-container{
+  text-align: center;
+  max-width: 500px;
+  margin: 120px auto 150px auto;
+}
+
+.slider-container-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.slider-subcontainer{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.slider-subcontainer-label-1{
+  float: left;
+}
+
+.slider-subcontainer-label-2{
+  float: right;
+}
+
+.slider-container input{
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 20px  
+}
+
+.slider-container input[type='range']{
+  -webkit-appearance: none;
+}
+
+.slider-container input[type='range']:focus{
+  outline: none;
+}
+
+.slider-container input[type='range']::-webkit-slider-runnable-track{
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #747474;
+  background: #8c00ff;
+  border-radius: 29px;
+  border: 1px solid #8c00ff;
+}
+
+.slider-container input[type='range']::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  border: 2px solid #8c00ff;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -8px;
+}
+
+.slider-container input[type='range']::-webkit-slider-thumb:hover{
+  border: 2px solid #c228ff;
+}
+
+
+/*=============================*/
+/* Textfield.js */
+/*=============================*/
+.textfield-container{
+  text-align: center;
+}
+
+.textfield-container-title{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.textfield-container input{
+  margin-top: 20px;
+  padding: 3px;
+  min-width: 250px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #8c00ff;
+  font-size: 20px;
+}
+
+
+/*=============================*/
+/* Notification.js */
+/*=============================*/
+.notification-container{
+  margin-top: 5px;
+  position: absolute;
+  left: 50%;
+  padding: 5px;
+  background-color: rgb(201, 0, 0);
+  border-radius: 5px;
+  max-width: 280px;
+  opacity: 1; 
+}
+
+.notification-container::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(201, 0, 0) transparent;
+}
+
+.notification-container h2{
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
