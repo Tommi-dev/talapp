@@ -41,7 +41,7 @@ const Form = (props) => {
         date: new Date()
       }
   
-      const returnedData = teamService.create(newObject)
+      const returnedData = await teamService.create(newObject)
       props.setTeams(props.teams.concat(returnedData))
       
       setMotivation(null)
