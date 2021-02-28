@@ -35,6 +35,7 @@ const Result = (props) => {
         </div>
 
         <div className='result-historicaldata-subcontainer' >
+
           <div className='result-historicaldata-subcontainer-item' >
             <p>Tiimin koko</p>
             <BsFillPeopleFill className='result-historicaldata-subcontainer-item-icon' />
@@ -52,9 +53,7 @@ const Result = (props) => {
               height={200}            
             />
           </div>
-        </div>
 
-        <div className='result-historicaldata-subcontainer' >
           <div className='result-historicaldata-subcontainer-item' >
             <p>Motivaatio</p>
             <GiFist className='result-historicaldata-subcontainer-item-icon' />
@@ -72,9 +71,7 @@ const Result = (props) => {
               height={200}            
             />
           </div>
-        </div>
 
-        <div className='result-historicaldata-subcontainer' >
           <div className='result-historicaldata-subcontainer-item' >
             <p>Henkilökemiat</p>
             <GiRelationshipBounds className='result-historicaldata-subcontainer-item-icon' />
@@ -92,9 +89,7 @@ const Result = (props) => {
               height={200}            
             />
           </div>
-        </div>
 
-        <div className='result-historicaldata-subcontainer' >
           <div className='result-historicaldata-subcontainer-item' >
             <p>Tehokkuus</p>
             <CgPerformance className='result-historicaldata-subcontainer-item-icon' />
@@ -112,9 +107,7 @@ const Result = (props) => {
               height={200}            
             />
           </div>
-        </div>
 
-        <div className='result-historicaldata-subcontainer' >
           <div className='result-historicaldata-subcontainer-item' >
             <p>Täsmällisyys</p>
             <AiFillSchedule className='result-historicaldata-subcontainer-item-icon' />
@@ -132,8 +125,8 @@ const Result = (props) => {
               height={200}            
             />
           </div>
-        </div>
 
+        </div>
       </section>
 
       <Button title='Alkuun' type='button' changeView={returnToTheFormPage} />

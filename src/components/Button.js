@@ -4,7 +4,7 @@ const Button = (props) => {
 
   if (props.title === 'Alkuun') {
     return (
-      <div className='button-container' >
+      <div className='button-container-2' >
         <button type={props.type} onClick={props.changeView} > {props.title} </button>
       </div>
     )

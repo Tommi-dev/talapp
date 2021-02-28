@@ -30,6 +30,33 @@
   background-color: #8c00ffbd;
 }
 
+.button-container-2{
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  bottom: 30px;
+}
+
+.button-container-2 button{
+  background-color: #8c00ff;
+  border: 2px solid #8c00ff;
+  border-radius: 10px;
+  color: white;
+  padding: 8px;
+  width: 200px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.342), 0 6px 20px 0 rgba(0, 0, 0, 0.384);
+}
+
+.button-container-2 button:hover{
+  background-color: #8c00ffbd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.507), 0 6px 20px 0 rgba(0, 0, 0, 0.568);
+}
+
 
 /*=============================*/
 /* Form.js */
@@ -298,6 +325,60 @@
   color: white;
 }
 
+/* Historical data */
+.result-historicaldata-container{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  background-color: #8c00ff;
+  margin-top: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.result-historicaldata-container-title{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.result-historicaldata-container-title h2{
+  color: white;
+}
+
+.result-historicaldata-subcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.result-historicaldata-subcontainer-item{
+  margin: 100px 20px 50px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.result-historicaldata-subcontainer-item:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.39), 0 6px 20px 0 rgba(0, 0, 0, 0.37);
+}
+
+.result-historicaldata-subcontainer-item p{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+}
+
+.result-historicaldata-subcontainer-item-icon{
+  width: 80px;
+  height: auto;
+  margin: 30px;
+  color: #b700ff;
+}
+
 
 /*=============================*/
 /* Formdata.js */
@@ -357,3 +438,8 @@
   font-size: 15px;
   padding: 0;
 }
+
+
+/*=============================*/
+/* Linechart.js */
+/*=============================*/
