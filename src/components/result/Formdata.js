@@ -10,7 +10,10 @@ const Formdata = (props) => {
           <p> {props.titles[i]} </p>
           <div className='result-formdata-subcontainer-item-container' >
             <div className='result-formdata-subcontainer-item-subcontainer' >
-              <p> {props.data[item]} </p>
+              {props.attributes[i] === 'size' ? 
+                <p> {props.data[item]} </p> : 
+                <p> {props.data[item]}% </p>
+              }
             </div>
           </div>
         </div>
