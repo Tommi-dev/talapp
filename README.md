@@ -44,3 +44,12 @@ Tapahtuman kuvaus:
   2. Käyttäjän tulokset on esitetty numeerisesti, kaavioiden ja kuvien avulla.
   3. Käyttäjä voi tutkia historiallista dataa.
   4. Käyttäjä voi laitteesta riippumatta ihailla tuloksiaan selkeästi.
+  
+
+## Sovelluksen esittely ja käyttöönotto
+  
+### Näkymät
+  
+<img src="images/1.png" width="100" height="auto">
+  
+<img src="images/2.png" width="100" height="auto">
