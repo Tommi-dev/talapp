@@ -62,13 +62,6 @@ const Form = (props) => {
 
   }
 
-  console.log('motivation value: ', motivation)
-  console.log('chemistry value: ', chemistry)
-  console.log('performance value: ', performance)
-  console.log('punctuality value: ', punctuality)
-  console.log('size value: ', size)
-  console.log('Error message: ', errorMessage)
-
   return (
     <form className='form-container' onSubmit={submitForm} >
       <h1>Kyselylomake</h1>

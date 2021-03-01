@@ -14,9 +14,6 @@ const App = () => {
     )
   }, [])
 
-  console.log('teams length: ', teams.length)
-  console.log('teams: ', teams)
-
   if (formVisible) {
     return (
         <Form
