@@ -50,6 +50,6 @@ Tapahtuman kuvaus:
   
 ### Näkymät
   
-<img src="./images/1.png" width="1000" height="auto">
+<img src="./images/1.PNG" width="1000" height="auto">
   
-<img src="./images/2.png" width="1000" height="auto">
+<img src="./images/2.PNG" width="1000" height="auto">
