@@ -1,17 +1,26 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import Result from '../components/result/Result'
 
-test('renders the title of the Result component', () => {
-
+describe('Testataan komponenttia <Result >', () => {
+  const teams = [
+    {
+      motivation: 1,
+      size: 1,
+      chemistry: 1,
+      performance: 1,
+      puncutality: 1
+    }
+  ]
   const component = render(
-    <Result />
+    <Result teams={teams} />
   )
-
-  const element = component.getByText(
-    'Kyselylomakkeen tulokset'
-  )
-  expect(element).toBeDefined()
-
+    
+  test('renderöi komponentin otsikon', () => {
+  
+    const div = component.container.querySelector('h1')
+    expect(div).toHaveTextContent('Kyselylomakkeen tulokset')
+  
+  })
 })
