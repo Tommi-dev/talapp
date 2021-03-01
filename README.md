@@ -53,3 +53,30 @@ Tapahtuman kuvaus:
 <img src="./images/1.PNG" width="1000" height="auto">
   
 <img src="./images/2.PNG" width="1000" height="auto">
+  
+  
+### Sovelluksen käyttöönotto
+  
+1. Lataa repositorio
+  
+### `git clone https://github.com/Tommi-dev/talapp.git`
+  
+2. Mene ladatun repositorion juurihakemistoon ja asenna riippuvuudet
+  
+### `npm install`
+  
+3. Tarkasta riippuvuuksien turvallisuus
+  
+### `npm audit`
+  
+4. Käynnistä sovellus
+  
+### `npm start`
+  
+5. Käynnistä JSON serveri
+  
+### `npm run server`
+
+6. Suorita testit
+  
+### `npm run test`
